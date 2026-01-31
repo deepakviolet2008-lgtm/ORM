@@ -1,6 +1,5 @@
 # Ex02 Django ORM Web Application
-## Date: 12/12/2025
-# REF:25018314
+## Date: 30/01/2026
 
 ## AIM
 To develop a Django Application to store and retrieve data from a E-Commerce Website Database for Amazon or Flipkart using Object Relational Mapping(ORM).
@@ -20,30 +19,32 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
-~~~
-admin.py
-
-from django.contrib import admin
-from .models import amazon_DB,amazon_DBAdmin
-admin.site.register(amazon_DB,amazon_DBAdmin)
-
+```
 models.py
-
-from django.db import models 
+from django.db import models
 from django.contrib import admin
-class amazon_DB (models.Model):
-     Product_name=models.CharField(max_length=20)
-     S_no=models.IntegerField (primary_key=True)
-     Product_type=models.CharField(max_length=20)
-     Price=models.CharField(max_length=20)
-     Year=models.IntegerField()
-class amazon_DBAdmin(admin.ModelAdmin):
-     list_display=["Product_name","S_no","Product_type","Price","Year"]
+class foodappDB(models.Model):
+	order_id=models.IntegerField(primary_key=True)
+	Name=models.CharField(max_length=20)
+	Food_Amount=models.FloatField()
+	delivery_charge=models.FloatField()
+	Food_name=models.CharField(max_length=30)
+	Address=models.CharField(max_length=100)
+	order_date=models.DateField()
+	order_time=models.TimeField()
+	Mobile_no=models.IntegerField()
+class foodappDBAdmin(admin.ModelAdmin):
+	list_display=['order_id','Name','Food_Amount','delivery_charge','Food_name','Address','order_date','order_time','Mobile_no'];
 
-~~~
+admin.py
+from django.contrib import admin
+from .models import foodappDB,foodappDBAdmin
+admin.site.register(foodappDB,foodappDBAdmin)
+
+```
 
 ## OUTPUT
-![alt text](<Screenshot 2025-12-11 112434.png>)
+![alt text](<Screenshot 2026-01-30 144445.png>)
 
 
 
