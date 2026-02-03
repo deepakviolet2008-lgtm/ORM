@@ -2,7 +2,7 @@
 ## Date: 30/01/2026
 
 ## AIM
-To develop a Django Application to store and retrieve data from a E-Commerce Website Database for Amazon or Flipkart using Object Relational Mapping(ORM).
+To develop a Django Application to store and retrieve data from an Online Food Delivery Database platform like Zomato or Swiggy using Object Relational Mapping(ORM).
 
 ## DESIGN STEPS
 
@@ -49,4 +49,4 @@ admin.site.register(foodappDB,foodappDBAdmin)
 
 
 ## RESULT
-Thus the program for creating E-commerce website database using ORM hass been executed successfully
+Thus the program for creating online food delivery website database using ORM hass been executed successfully
